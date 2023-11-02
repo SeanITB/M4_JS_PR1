@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nombre secret</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Seán Costelloe">
+        <!-- <link rel="icon" type="image/x-icon" href="/imatge/ITB_Logo_417 (1).png"> -->
+        <link rel="stylesheet" href="./adivinaNumero.css">
+        <script src="./adivinaNumero.js"></script>
+    </head>
+    <body>
+        <h1>Adivina el nombre secret</h1>
+        <section id="codigo">
+            <article class="digito">
+                <div>*</div>
+            </article>
+            <article class="digito">
+                <div>*</div>
+            </article>
+            <article class="digito">
+                <div>*</div>
+            </article>
+            <article class="digito">
+                <div>*</div>
+            </article>
+            <article class="digito">
+                <div>*</div>
+        </section>
+        <section id="comproba">
+            <form action="javascript:comprobasj()">
+                <h3>Escriu aqui un numero</h3>
+                <input id="contingutComproba" type="text" name="intent" placeholder="01234"><br>
+                <input type="submit" value="Comprobar"/>
+                <!--<input type="submit" value="Submit">-->
+                <!--<button id="buttonComproba" onclick="comprobasj()">COMPROBA</button>-->
+            </form>
+        </section>
+        <section id="info">
+            <p>Primer intent, sort!</p>
+        </section>
+    </body>
+</html>
