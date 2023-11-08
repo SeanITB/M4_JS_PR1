@@ -1,35 +1,37 @@
 
 function comprobasj() {
-    //vars
-    var aleatoi = Math.ceil(Math.random()*10000)
+    let a = "1534"
+    let b = "1234"
+    let c = "4321"
+    let d = "3"
 
-    //lets
-    let element;
-    let numeroUsuari;
-    let intents;
-    let arrNumeroUsuari = (5);
-    
-    //Obtindre els numeros
-    numeroUsuari = document.getElementById("contingutComproba").value;
-    console.log(numeroUsuari);
-    do {
-        intents = 0;
-        intents++;
-        //for (index = 0; arrNumeroUsuari.last)
-
-        let incorrecte = (numeroUsuari > aleatoi)?true:false;
-        console.log(intents);
-        if (incorrecte == true){
-            document.getElementsByTagName("p")[0].innerHTML = "No és correcte, introdueix un numero MÉS PETIT que: " + numeroUsuari + ". Portes " + intents + " intents.";
+    //console.log(a[0])
+    /*
+    for (digit = 0; digit < 5; digit++){
+        if (a[digit] == b[digit]){
+            console.log("true")
         } 
-        else if (incorrecte == false) {
-            document.getElementsByTagName("p")[0].innerHTML = "No és correcte, introdueix un numero MÉS GRAN que: " + numeroUsuari + ". Portes " + intents + " intents.";
-        }
-    }while((aleatoi != numeroUsuari))
-    //Mostrar la sortida
+        else {
+            console.log("false")
+        }    
+    }
+    */
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
 
-    if (aleatoi == numeroUsuari) {
-        document.getElementsByClassName("digito").innerHTML = aleatori;
-    } 
-   
+    // Pasar numero aleatori a un array
+    var arr = String(a).split("").map((a)=>{
+        return String(a)
+      });
+    console.log(arr);
+
+    // Comprovar si numero esta en arr
+    if (arr.includes(d)) {
+        console.log("true");
+    }
+    else {
+        console.log("false")
+    }
 }
