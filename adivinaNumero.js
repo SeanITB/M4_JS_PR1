@@ -1,6 +1,6 @@
-// Obte els numeros aleatoris
+// Obte el numero aleatori
 var aleatori = Math.ceil(Math.random()*100000)
-console.log(aleatori)
+//console.log(aleatori)
 
 let posicioIncialCubitoPerIntent = 0
 function comprobasj() {
@@ -24,9 +24,12 @@ function comprobasj() {
     
     //Comprobar si el numero és correcte
     if (aleatori == numeroUsuari){
+        // Mostra el numero en codi 
         for (digit = 0; digit < 5; digit++) {
             document.getElementsByClassName("digitNumeroAleatori")[digit].innerHTML = strAleatori[digit]
         } 
+        // Mostra el mistage en info
+        document.getElementById("text").innerHTML = "Has encertat, enhorabona!!";
     } 
     else {
         //Mostrar el misatge d'error
@@ -34,7 +37,7 @@ function comprobasj() {
 
         // Crear cubitos
         for (cubito = posicioIncialCubitoPerIntent; cubito < (posicioIncialCubitoPerIntent + 5); cubito++) {
-            console.log("Esta en el cubito: " + cubito)
+            //console.log("Esta en el cubito: " + cubito)
             let resultat = document.getElementById("resultat");
             let creaArticle = document.createElement("article");
             let article = resultat.appendChild(creaArticle);
@@ -43,25 +46,28 @@ function comprobasj() {
     
         // Diseciuonar el numero del usuari
         for (posicioCubito = posicioIncialCubitoPerIntent, posicioNumero = 0; posicioCubito < (posicioIncialCubitoPerIntent + 5); posicioCubito++, posicioNumero++) {
-            console.log("Esta en la posicio: " + posicioCubito)
+            //console.log("Esta en la posicio: " + posicioCubito)
+            
             //Posar digit en cubito
             document.getElementsByClassName("digitResultat")[posicioCubito].innerHTML = strNumeroUsuari[posicioNumero];
             // Si el digit del numero és correcte
             if (strAleatori[posicioNumero] == strNumeroUsuari[posicioNumero]) {
-                console.log("Correcte");
+                //console.log("Correcte");
                 document.getElementsByClassName("digitResultat")[posicioCubito].style.backgroundColor = "green";
             }
-            // Si esta pero no en esa posicion
-            else if (arrayAleatori.includes(strNumeroUsuari[posicioNumero])) {
-                console.log("Mas o menos");
-                document.getElementsByClassName("digitResultat")[posicioCubito].style.backgroundColor = "yellow";
-            }
-            else {
-                console.log("incorrecte");
+        }
+        // Si esta pero no en esa posicion
+        for (posicioCubito = posicioIncialCubitoPerIntent, posicioNumero = 0; posicioCubito < (posicioIncialCubitoPerIntent + 5); posicioCubito++, posicioNumero++) {
+            //Comprobar que numero encara no estigui correcte
+            if (strAleatori[posicioNumero] != strNumeroUsuari[posicioNumero]) {
+                if ((arrayAleatori.includes(strNumeroUsuari[posicioNumero]))) {
+                    //console.log("Mas o menos");
+                    document.getElementsByClassName("digitResultat")[posicioCubito].style.backgroundColor = "yellow";
+                }
             }
         }    
         posicioIncialCubitoPerIntent += 5
-        console.log("Incrementa posicioIncial por " + posicioIncialCubitoPerIntent)
+        //console.log("Incrementa posicioIncial por " + posicioIncialCubitoPerIntent)    
     }   
 }
 
