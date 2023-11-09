@@ -5,7 +5,7 @@ body{
     flex-direction: column;
 }
 h1{
-    color:blue;
+    color: #0A91AB;
     font-size: 30px;
 }
 #codigo{
@@ -13,8 +13,8 @@ h1{
     justify-content: space-around;
 }
 .digitNumeroAleatori{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 30px;
     border: 3px;
     padding: 45px;
@@ -23,21 +23,45 @@ h1{
     text-align: center;
 }
 #comproba{
-    width: 80%;
-    height: 300px;
+    width: 600px;
+    height: 150px;
+    margin: 10px;
     border: 3px;
+    margin: 10px;
+    padding: 10px;
     border-style: solid;
     border-radius: 2%;
     border-color:#0A91AB;
+    color: #0A91AB;
+}
+#contingutComproba{
+    background-color: white;
+    border: 0px;
 }
 hr{
     border: 1px solid #0A91AB;
 }
+#button{
+    width: 600px;
+    height: 30px;
+    background-color: #FFC045;
+    color: white;
+}
+#info{
+    width: 600px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3%;    
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+
 #resultat{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 .digitResultat{
     width: 100px;
